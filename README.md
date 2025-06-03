@@ -11,9 +11,29 @@ Bonus Points: The code allows for a particular data key to be retrieved individu
 ```
 
 
-## Solution was ran inside EC2 instance on AWS and written out to [file](output.json) 
+## Solution was ran inside EC2 instance 
 
-![execution](execute_program.jpeg)
+### Ran various scenarios and moved output to various files
+
+
+#### Full output
+
+
+![execution](images/execute_program_full_output.jpeg)
+
+[File](outputs/full-output.json) 
+
+#### Single key nested output
+
+![execution](images/execute_program_nested_single_key.jpeg)
+
+[File](outputs/single-key-nested-output.json) 
+
+#### Single key non-nested output
+
+![execution](images/execute_program_single_key_not_nested.jpeg)
+
+[File](outputs/single-key-not-nested-output.json) 
 
 Docs used: 
 - https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/configuring-instance-metadata-service.html

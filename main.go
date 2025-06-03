@@ -103,7 +103,21 @@ func main() {
 		os.Exit(1)
 	}
 
-	metadata := getMetadata(token, "")
+	key := ""
+	args := os.Args
+	if len(args) > 1 {
+		key = args[1]
+	}
+
+	var metadata any
+	if key != "" {
+		metadata = map[string]any{
+			key: getMetadata(token, key),
+		}
+	} else {
+		metadata = getMetadata(token, "")
+	}
+
 	b, err := json.MarshalIndent(metadata, "", "\t")
 	if err != nil {
 		fmt.Println("error structuring json output:", err)
